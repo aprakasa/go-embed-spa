@@ -1,0 +1,8 @@
+# OS or Editor folders
+_*
+._*
+*.test
+.cache
+.DS_Store
+nbproject
+Thumbs.db
