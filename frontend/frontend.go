@@ -8,9 +8,7 @@ import (
 )
 
 // Embed the build directory from the frontend.
-//go:embed build/*
-//go:embed build/_app/immutable/pages/*
-//go:embed build/_app/immutable/assets/pages/*
+//go:embed all:build
 var BuildFs embed.FS
 
 // Get the subtree of the embedded files with `build` directory as a root.
