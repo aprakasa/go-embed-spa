@@ -26,5 +26,4 @@ FROM gcr.io/distroless/static
 ENV APP_PORT=5050
 WORKDIR /app
 COPY --from=binary-builder --chown=nonroot:nonroot /builder/engine .
-EXPOSE ${APP_PORT}
 ENTRYPOINT ["./engine"]
