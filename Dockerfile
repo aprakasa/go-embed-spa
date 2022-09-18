@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.2
 
 # Stage 1: Build the static files
-FROM node:16.15.1-alpine3.15 AS frontend-builder
+FROM node:16.17.0-alpine3.16 AS frontend-builder
 WORKDIR /frontend
 COPY /frontend/package.json /frontend/package-lock.json ./
 RUN npm ci
@@ -9,7 +9,7 @@ COPY /frontend .
 RUN npm run build
 
 # Stage 2: Build the binary
-FROM golang:1.18.3-alpine3.15 AS binary-builder
+FROM golang:1.19.1-alpine3.16 AS binary-builder
 ARG APP_NAME=http
 RUN apk update && apk upgrade && apk --update add git
 WORKDIR /builder
