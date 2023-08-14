@@ -53,3 +53,21 @@ Fiber framework
 ```bash
 make run APP_NAME=fiber APP_PORT=5052
 ```
+
+## Update
+Reduce the binary size around 50%-70% by using [UPX](https://upx.github.io/).
+
+Before:
+```
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
+spa          fiber     ddbdf411532d   7 seconds ago        8.98MB
+spa          echo      f0f144aecd27   53 seconds ago       10.9MB
+spa          http      1b4f9bd0632b   About a minute ago   7.29MB
+```
+After:
+```
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+spa          fiber     6a2d174a176b   6 minutes ago   5.23MB
+spa          echo      a82aa5113481   7 minutes ago   5.79MB
+spa          http      4248e779a14f   8 minutes ago   4.49MB
+```

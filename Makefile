@@ -10,8 +10,8 @@ clean:
 
 static: clean
 	cd $(FRONTEND_DIR); \
-	npm install; \
-	npm run build
+	pnpm i; \
+	pnpm build
 
 build: clean
 	DOCKER_BUILDKIT=1 docker build \
